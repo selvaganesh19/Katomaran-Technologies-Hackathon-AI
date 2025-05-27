@@ -1,10 +1,11 @@
+# backend/config.py
+
 import os
 from dotenv import load_dotenv
 
 load_dotenv()
 
-AZURE_OPENAI_KEY = os.getenv("AZURE_OPENAI_KEY")
-AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT")
-AZURE_OPENAI_DEPLOYMENT = os.getenv("AZURE_OPENAI_DEPLOYMENT")
-AZURE_OPENAI_VERSION = "2023-05-15"
 MONGO_URI = os.getenv("MONGO_URI")
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+OPENROUTER_BASE_URL = os.getenv("OPENROUTER_BASE_URL")
+OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL")

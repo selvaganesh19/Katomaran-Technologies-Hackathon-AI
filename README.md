@@ -1,13 +1,13 @@
-# 🧠 Face Recognition Platform with Real-Time AI Q&A using RAG and Azure OpenAI
+# 🧠 Face Recognition Platform with Real-Time AI Q&A using RAG and OpenRouter.ai
 
-This full-stack project integrates **face recognition**, **RAG-based Q&A (LangChain + FAISS + Azure OpenAI)**, and **real-time chat** using **Flask**, **React.js**, **Node.js**, and **MongoDB**.
+This full-stack project integrates **face recognition**, **RAG-based Q&A (LangChain + FAISS + OpenRouter.ai)**, and **real-time chat** using **Flask**, **React.js**, **Node.js**, and **MongoDB**.
 
 ---
 
 ## 🌐 Live Features
 
 - 🧑‍💻 Register and recognize faces from webcam
-- 🤖 Real-time question answering via LangChain + FAISS + Azure OpenAI
+- 🤖 Real-time question answering via LangChain + FAISS + OpenRouter.ai
 - 🧠 Uses RAG (Retrieval-Augmented Generation)
 - 🔒 MongoDB for persistent face embedding storage
 - 🔌 WebSocket server for real-time chat between user and AI
@@ -16,35 +16,36 @@ This full-stack project integrates **face recognition**, **RAG-based Q&A (LangCh
 
 ## 📁 Project Structure
 
-📁 face-recognition-rag-platform  
-├── 📁 backend  
-│   ├── 📝 app.py – Flask entry point  
-│   ├── 📁 api  
-│   │   └── 📝 face_routes.py – Routes for face registration/recognition  
-│   ├── 📁 services  
-│   │   └── 📝 db_service.py – MongoDB interaction  
-│   ├── 🧠 rag_engine.py – LangChain + FAISS + Azure OpenAI integration  
-│   ├── ⚙️ config.py – Config handling (env loading)  
-│   └── 📦 requirements.txt – Python dependencies  
-│  
-├── 📁 node-server  
-│   └── 📝 server.js – Node.js WebSocket bridge  
-│  
-├── 📁 frontend  
-│   ├── 📁 public  
-│   │   └── 📝 index.html  
-│   ├── 📁 src  
-│   │   ├── 📁 components  
-│   │   │   ├── 🧑 Register.js – Face Registration UI  
-│   │   │   ├── 👁️ LiveRecognition.js – Live face recognition UI  
-│   │   │   └── 💬 ChatWidget.js – Chat interface for Q&A  
-│   │   ├── 🧩 App.js – Main app layout  
-│   │   └── 📍 index.js – React entry point  
-│   └── 📦 package.json – Frontend dependencies  
-│  
-├── 🔐 .env – API keys and Mongo URI (excluded from version control)  
-├── 📘 README.md – Project documentation  
-└── 🖼️ architecture.png – System architecture diagram  
+
+📁 face-recognition-rag-platform
+├── 📁 backend
+│ ├── 📝 app.py – Flask entry point
+│ ├── 📁 api
+│ │ └── 📝 face_routes.py – Routes for face registration/recognition
+│ ├── 📁 services
+│ │ └── 📝 db_service.py – MongoDB interaction
+│ ├── 🧠 rag_engine.py – LangChain + FAISS + OpenRouter.ai integration
+│ ├── ⚙️ config.py – Config handling (env loading)
+│ └── 📦 requirements.txt – Python dependencies
+│
+├── 📁 node-server
+│ └── 📝 server.js – Node.js WebSocket bridge
+│
+├── 📁 frontend
+│ ├── 📁 public
+│ │ └── 📝 index.html
+│ ├── 📁 src
+│ │ ├── 📁 components
+│ │ │ ├── 🧑 Register.js – Face Registration UI
+│ │ │ ├── 👁️ LiveRecognition.js – Live face recognition UI
+│ │ │ └── 💬 ChatWidget.js – Chat interface for Q&A
+│ │ ├── 🧩 App.js – Main app layout
+│ │ └── 📍 index.js – React entry point
+│ └── 📦 package.json – Frontend dependencies
+│
+├── 🔐 .env – API keys and Mongo URI (excluded from version control)
+├── 📘 README.md – Project documentation
+└── 🖼️ architecture.png – System architecture diagram
 
 
 ---
@@ -57,6 +58,7 @@ This full-stack project integrates **face recognition**, **RAG-based Q&A (LangCh
 git clone https://github.com/your-username/face-recognition-rag-platform.git
 cd face-recognition-rag-platform
 
+
 2️⃣ Setup Backend (Flask)
 
 cd backend
@@ -67,10 +69,9 @@ pip install -r requirements.txt
 🔐 Create .env in backend/envCopyEdit
 
 MONGO_URI=mongodb+srv://<user>:<pass>@cluster.mongodb.net/?retryWrites=true&w=majority
-AZURE_OPENAI_API_KEY=your_api_key
-AZURE_OPENAI_ENDPOINT=https://your-resource-name.openai.azure.com/
-AZURE_OPENAI_DEPLOYMENT=your-deployment
-AZURE_OPENAI_MODEL=gpt-35-turbo
+OPENROUTER_API_KEY=your_openrouter_api_key
+OPENROUTER_BASE_URL=https://openrouter.ai/api/v1
+OPENROUTER_MODEL=google/gemma-7b-it
 
 3️⃣ Setup Node WebSocket Server
 
@@ -90,7 +91,7 @@ npm start
 | --------- | ----------------------------------------- |
 | Frontend  | React.js, HTML, CSS, JavaScript           |
 | Backend   | Flask (Python)                            |
-| AI Engine | LangChain + FAISS + Azure OpenAI (GPT)    |
+| AI Engine | LangChain + FAISS + OpenRouter.ai (GPT)   |
 | Database  | MongoDB Atlas                             |
 | Realtime  | Node.js WebSocket                         |
 | DevOps    | GitHub, GitHub Student Pack (API credits) |
@@ -98,13 +99,14 @@ npm start
 
 💡 RAG Engine
 
-    -Embeds documents using OpenAIEmbeddings
+📌 Embeds documents using OpenAIEmbeddings or compatible interface
 
-    -Stores vectors in FAISS
+📁 Stores vectors in FAISS
 
-    -Uses LangChain RetrievalQA for question-answering
+🧠 Uses LangChain RetrievalQA for question answering
 
-    -Powered by Azure OpenAI GPT models
+🛰️ Powered by OpenRouter.ai GPT models (like GPT-4, Claude, etc.)
+
 
 🧠 How It Works
     -📸 Face captured via webcam
@@ -119,11 +121,13 @@ npm start
 
     -💬 Real-time WebSocket sends back answer
 
-    -🧑‍🎓 GitHub Student Pack Users
-You can get free Azure credits and OpenAI API keys via:
 
-https://education.github.com/pack
+Get daily free tokens using:
 
-    -Create a Microsoft Azure for Students account
+👉 https://openrouter.ai
 
-    -Use the credits for deploying your own GPT model with Azure OpenAI Studio
+## 🖼️ Architecture Diagram
+
+> See `architecture.png` for the overall system flow.
+
+---
