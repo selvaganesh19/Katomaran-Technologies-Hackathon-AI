@@ -14,77 +14,6 @@ This full-stack project integrates **face recognition**, **RAG-based Q&A (LangCh
 
 ---
 
-## 📁 Project Structure
-
-📁 face-recognition-rag-platform
-├── 📁 backend                          # Flask backend
-│   ├── 📝 app.py                       # Flask entry point
-│   ├── 📝 recognition_api.py          # Main API for face recognition and RAG calls
-│   ├── 📁 api
-│   │   ├── 📝 face_routes.py          # Routes for face registration/recognition
-│   │   └── 💬 chat_routes.py          # Routes for real-time chat/Q&A
-│   ├── 📁 services
-│   │   ├── 📝 db_service.py           # MongoDB interaction
-│   │   └── 🧠 rag_engine.py           # LangChain + FAISS + OpenRouter.ai integration
-│   ├── ⚙️ config.py                   # Config handling (env loading)
-│   └── 📦 requirements.txt            # Python dependencies
-│
-├── 📁 node-server                     # WebSocket bridge
-│   └── 📝 server.js                   # Node.js WebSocket server
-│
-├── 📁 frontend                        # React frontend
-│   ├── 📁 public
-│   │   └── 📝 index.html              # HTML template
-│   ├── 📁 src
-│   │   ├── 📁 components
-│   │   │   ├── 🧑 Register.js         # Face Registration UI
-│   │   │   ├── 👁️ LiveRecognition.js # Live face recognition UI
-│   │   │   └── 💬 ChatWidget.js      # Chat interface for Q&A
-│   │   ├── 🧩 App.js                 # Main app layout
-│   │   └── 📍 index.js               # React entry point
-│   └── 📦 package.json               # Frontend dependencies
-│
-├── 🔐 .env                            # API keys and Mongo URI (excluded from version control)
-├── 📘 README.md                       # Project documentation
-└── 🖼️ architecture.png               # System architecture diagram
-
----
-
-## 🚀 Setup Instructions
-
-### 1️⃣ Clone the Repo
-
-```bash
-git clone https://github.com/your-username/face-recognition-rag-platform.git
-cd face-recognition-rag-platform
-
-
-2️⃣ Setup Backend (Flask)
-
-cd backend
-python -m venv venv
-source venv/bin/activate   # or venv\Scripts\activate on Windows
-pip install -r requirements.txt
-
-🔐 Create .env in backend/envCopyEdit
-
-MONGO_URI=mongodb+srv://<user>:<pass>@cluster.mongodb.net/?retryWrites=true&w=majority
-OPENROUTER_API_KEY=your_openrouter_api_key
-OPENROUTER_BASE_URL=https://openrouter.ai/api/v1
-OPENROUTER_MODEL=google/gemma-7b-it
-
-3️⃣ Setup Node WebSocket Server
-
-cd ../node-server
-npm install
-node server.js
-
-4️⃣ Setup Frontend (React.js)
-
-cd ../frontend
-npm install
-npm start
-
 🛠️ Tech Stack
 
 | Layer     | Tools                                     |
@@ -121,8 +50,7 @@ npm start
 
     -💬 Real-time WebSocket sends back answer
 
-
-Get daily free tokens using:
+API used from:
 
 👉 https://openrouter.ai
 
