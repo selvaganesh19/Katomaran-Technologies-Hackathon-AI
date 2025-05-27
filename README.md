@@ -16,7 +16,6 @@ This full-stack project integrates **face recognition**, **RAG-based Q&A (LangCh
 
 ## 📁 Project Structure
 
-
 📁 face-recognition-rag-platform
 ├── 📁 backend
 │ ├── 📝 app.py – Flask entry point
@@ -46,7 +45,6 @@ This full-stack project integrates **face recognition**, **RAG-based Q&A (LangCh
 ├── 🔐 .env – API keys and Mongo URI (excluded from version control)
 ├── 📘 README.md – Project documentation
 └── 🖼️ architecture.png – System architecture diagram
-
 
 ---
 
@@ -126,8 +124,8 @@ Get daily free tokens using:
 
 👉 https://openrouter.ai
 
-## 🖼️ Architecture Diagram
+## 🖼️ System Architecture
 
-> See `architecture.png` for the overall system flow.
+![Architecture Diagram](architecture.png)
 
 ---
