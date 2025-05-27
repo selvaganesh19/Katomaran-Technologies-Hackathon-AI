@@ -16,36 +16,35 @@ This full-stack project integrates **face recognition**, **RAG-based Q&A (LangCh
 
 ## 📁 Project Structure
 
-face-recognition-rag-platform/
-│
-├── backend/
-│ ├── app.py # Flask entry point
-│ ├── api/
-│ │ └── face_routes.py # Routes for face registration/recognition
-│ ├── services/
-│ │ └── db_service.py # MongoDB interaction
-│ ├── rag_engine.py # LangChain + FAISS + Azure OpenAI integration
-│ ├── config.py # Config handling (env loading)
-│ └── requirements.txt # Python dependencies
-│
-├── node-server/
-│ └── server.js # Node.js WebSocket bridge
-│
-├── frontend/
-│ ├── public/
-│ │ └── index.html
-│ ├── src/
-│ │ ├── components/
-│ │ │ ├── Register.js
-│ │ │ ├── LiveRecognition.js
-│ │ │ └── ChatWidget.js
-│ │ ├── App.js
-│ │ └── index.js
-│ └── package.json
-│
-├── .env # API keys and Mongo URI (excluded from version control)
-├── README.md
-└── architecture.png # System diagram
+📁 face-recognition-rag-platform  
+├── 📁 backend  
+│   ├── 📝 app.py – Flask entry point  
+│   ├── 📁 api  
+│   │   └── 📝 face_routes.py – Routes for face registration/recognition  
+│   ├── 📁 services  
+│   │   └── 📝 db_service.py – MongoDB interaction  
+│   ├── 🧠 rag_engine.py – LangChain + FAISS + Azure OpenAI integration  
+│   ├── ⚙️ config.py – Config handling (env loading)  
+│   └── 📦 requirements.txt – Python dependencies  
+│  
+├── 📁 node-server  
+│   └── 📝 server.js – Node.js WebSocket bridge  
+│  
+├── 📁 frontend  
+│   ├── 📁 public  
+│   │   └── 📝 index.html  
+│   ├── 📁 src  
+│   │   ├── 📁 components  
+│   │   │   ├── 🧑 Register.js – Face Registration UI  
+│   │   │   ├── 👁️ LiveRecognition.js – Live face recognition UI  
+│   │   │   └── 💬 ChatWidget.js – Chat interface for Q&A  
+│   │   ├── 🧩 App.js – Main app layout  
+│   │   └── 📍 index.js – React entry point  
+│   └── 📦 package.json – Frontend dependencies  
+│  
+├── 🔐 .env – API keys and Mongo URI (excluded from version control)  
+├── 📘 README.md – Project documentation  
+└── 🖼️ architecture.png – System architecture diagram  
 
 
 ---
