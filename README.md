@@ -17,34 +17,36 @@ This full-stack project integrates **face recognition**, **RAG-based Q&A (LangCh
 ## 📁 Project Structure
 
 📁 face-recognition-rag-platform
-├── 📁 backend
-│ ├── 📝 app.py – Flask entry point
-│ ├── 📁 api
-│ │ └── 📝 face_routes.py – Routes for face registration/recognition
-│ ├── 📁 services
-│ │ └── 📝 db_service.py – MongoDB interaction
-│ ├── 🧠 rag_engine.py – LangChain + FAISS + OpenRouter.ai integration
-│ ├── ⚙️ config.py – Config handling (env loading)
-│ └── 📦 requirements.txt – Python dependencies
+├── 📁 backend                          # Flask backend
+│   ├── 📝 app.py                       # Flask entry point
+│   ├── 📝 recognition_api.py          # Main API for face recognition and RAG calls
+│   ├── 📁 api
+│   │   ├── 📝 face_routes.py          # Routes for face registration/recognition
+│   │   └── 💬 chat_routes.py          # Routes for real-time chat/Q&A
+│   ├── 📁 services
+│   │   ├── 📝 db_service.py           # MongoDB interaction
+│   │   └── 🧠 rag_engine.py           # LangChain + FAISS + OpenRouter.ai integration
+│   ├── ⚙️ config.py                   # Config handling (env loading)
+│   └── 📦 requirements.txt            # Python dependencies
 │
-├── 📁 node-server
-│ └── 📝 server.js – Node.js WebSocket bridge
+├── 📁 node-server                     # WebSocket bridge
+│   └── 📝 server.js                   # Node.js WebSocket server
 │
-├── 📁 frontend
-│ ├── 📁 public
-│ │ └── 📝 index.html
-│ ├── 📁 src
-│ │ ├── 📁 components
-│ │ │ ├── 🧑 Register.js – Face Registration UI
-│ │ │ ├── 👁️ LiveRecognition.js – Live face recognition UI
-│ │ │ └── 💬 ChatWidget.js – Chat interface for Q&A
-│ │ ├── 🧩 App.js – Main app layout
-│ │ └── 📍 index.js – React entry point
-│ └── 📦 package.json – Frontend dependencies
+├── 📁 frontend                        # React frontend
+│   ├── 📁 public
+│   │   └── 📝 index.html              # HTML template
+│   ├── 📁 src
+│   │   ├── 📁 components
+│   │   │   ├── 🧑 Register.js         # Face Registration UI
+│   │   │   ├── 👁️ LiveRecognition.js # Live face recognition UI
+│   │   │   └── 💬 ChatWidget.js      # Chat interface for Q&A
+│   │   ├── 🧩 App.js                 # Main app layout
+│   │   └── 📍 index.js               # React entry point
+│   └── 📦 package.json               # Frontend dependencies
 │
-├── 🔐 .env – API keys and Mongo URI (excluded from version control)
-├── 📘 README.md – Project documentation
-└── 🖼️ architecture.png – System architecture diagram
+├── 🔐 .env                            # API keys and Mongo URI (excluded from version control)
+├── 📘 README.md                       # Project documentation
+└── 🖼️ architecture.png               # System architecture diagram
 
 ---
 
