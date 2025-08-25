@@ -1,6 +1,6 @@
 # 🧠 Face Recognition Platform with Real-Time AI Q&A using RAG and OpenRouter.ai
 
-This full-stack project integrates **face recognition**, **RAG-based Q&A (LangChain + FAISS + OpenRouter.ai)**, and **real-time chat** using **Flask**, **React.js**, **Node.js**, and **MongoDB**. ==
+This full-stack project integrates **face recognition**, **RAG-based Q&A (LangChain + FAISS + OpenRouter.ai)**, and **real-time chat** using **Flask**, **React.js**, **Node.js**, and **MongoDB**. 
 
 ---
 
